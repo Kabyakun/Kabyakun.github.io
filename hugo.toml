@@ -1,24 +1,61 @@
-baseURL = "https://Kabyakun.github.io/"
+baseURL = "https://kabyakun.github.io/"
 languageCode = "en-us"
-title = "Kabyadeep's Site"
+title = "Kabyadeep Das"
 theme = "PaperMod"
 paginate = 5
 
 [params]
-  author = "Kabyadeep"
-  description = "Physics, materials, and research notes"
+  author = "Kabyadeep Das"
+  description = "3rd year undergraduate, Materials Research Centre, IISc Bangalore"
+  defaultTheme = "dark"
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  defaultTheme = "auto"
+
+  [params.profileMode]
+    enabled = true
+    title = "Kabyadeep Das"
+    subtitle = "3rd year undergraduate at the Materials Research Centre, IISc Bangalore. Interested in experimental condensed matter physics, 2D materials, and nanoscale devices."
+    imageUrl = "images/profile.jpg"
+    imageWidth = 200
+    imageHeight = 200
+    imageTitle = "Kabyadeep Das"
+
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/blog"
+
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Kabyakun"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:youremail@iisc.ac.in"
 
 [menu]
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Home"
+    url = "/"
     weight = 1
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Courses & Resources"
+    url = "/courses"
     weight = 2
+  [[menu.main]]
+    name = "CV"
+    url = "/cv"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 4
+  [[menu.main]]
+    name = "Misc"
+    url = "/misc"
+    weight = 5
