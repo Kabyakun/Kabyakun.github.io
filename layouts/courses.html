@@ -1,0 +1,414 @@
+{{ define "main" }}
+<style>
+  .course-section {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .course-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+  }
+  .course-entry {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .course-entry:last-child { border-bottom: none; }
+  .course-code {
+    font-family: monospace;
+    font-size: 0.82rem;
+    background: rgba(255,255,255,0.08);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: center;
+    margin-top: 0.15rem;
+  }
+  .course-name {
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+  .course-desc {
+    font-size: 0.85rem;
+    opacity: 0.65;
+  }
+  .course-sem {
+    font-size: 0.78rem;
+    opacity: 0.45;
+    font-style: italic;
+  }
+  .resource-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .resource-entry:last-child { border-bottom: none; }
+  .resource-link {
+    font-size: 0.82rem;
+    opacity: 0.5;
+    font-style: italic;
+  }
+</style>
+
+<h1 style="margin-bottom:0.3rem;">Courses & Resources</h1>
+<p style="opacity:0.6; margin-bottom:2rem;">Courses taken at IISc Bangalore · B.Sc. (Research) in Physics</p>
+
+<!-- Quantum Technology & Nanoscale -->
+<div class="course-section">
+  <h2>⚛️ Quantum Technology & Nanoscale Physics</h2>
+
+  <div class="course-entry">
+    <div class="course-code">IN 332</div>
+    <div>
+      <div class="course-name">2D Materials</div>
+      <div class="course-desc">Studied Graphene, transition metal dichalcogenides, and other two-dimensional materials</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 359</div>
+    <div>
+      <div class="course-name">Physics at the Nanoscale</div>
+      <div class="course-desc">Quantum transport, Landauer–Büttiker formalism, Coulomb blockade, weak localization, quantum Hall effect, graphene physics</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">QT 204</div>
+    <div>
+      <div class="course-name">Introduction to Materials for Quantum Technologies</div>
+      <div class="course-desc">Magnetism, superconductivity, and topological materials</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">QT 207</div>
+    <div>
+      <div class="course-name">Introduction to Quantum Computation</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">QT 202</div>
+    <div>
+      <div class="course-name">Introduction to Quantum Measurement</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">IN 232</div>
+    <div>
+      <div class="course-name">Concepts in Solid State Physics</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+</div>
+
+<!-- Core Physics -->
+<div class="course-section">
+  <h2>🔭 Core Physics</h2>
+
+
+  <div class="course-entry">
+    <div class="course-code">PH 352</div>
+    <div>
+      <div class="course-name">Semiconductor Physics</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 204</div>
+    <div>
+      <div class="course-name">Quantum Mechanics II</div>
+      <div class="course-desc">WKB approximation, variational methods, time-dependent perturbation theory</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 203</div>
+    <div>
+      <div class="course-name">Quantum Mechanics I</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 202</div>
+    <div>
+      <div class="course-name">Statistical Mechanics</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 201</div>
+    <div>
+      <div class="course-name">Classical Mechanics</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 205</div>
+    <div>
+      <div class="course-name">Mathematical Methods of Physics</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">PH 211</div>
+    <div>
+      <div class="course-name">General Physics Laboratory</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+</div>
+
+<!-- Computational -->
+<div class="course-section">
+  <h2>💻 Computational & Programming</h2>
+
+  <div class="course-entry">
+    <div class="course-code">MR 308</div>
+    <div>
+      <div class="course-name">Computational Modelling of Materials</div>
+      <div class="course-desc">Hartree–Fock, DFT, Quantum ESPRESSO, band structure calculations</div>
+      <div class="course-sem">Spring 2026</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">E0 270</div>
+    <div>
+      <div class="course-name">Machine Learning</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UENG 101</div>
+    <div>
+      <div class="course-name">Algorithms and Programming</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+</div>
+
+<!-- UG Foundation -->
+<div class="course-section">
+  <h2>🧪 Undergraduate Foundation</h2>
+
+  <div class="course-entry">
+    <div class="course-code">UMA 101</div>
+    <div>
+      <div class="course-name">Analysis and Linear Algebra I</div>
+      <div class="course-sem">Autumn 2023</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UMA 102</div>
+    <div>
+      <div class="course-name">Analysis and Linear Algebra II</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UMA 201</div>
+    <div>
+      <div class="course-name">Probability and Statistics</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UPH 101</div>
+    <div>
+      <div class="course-name">Introductory Physics I</div>
+      <div class="course-sem">Autumn 2023</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UPH 102</div>
+    <div>
+      <div class="course-name">Introductory Physics II</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UPH 201</div>
+    <div>
+      <div class="course-name">Introductory Physics III</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UP 202</div>
+    <div>
+      <div class="course-name">Intermediate Mechanics, Oscillations and Waves</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UP 203</div>
+    <div>
+      <div class="course-name">Intermediate Electromagnetism and Quantum Physics of Radiation</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UP 204</div>
+    <div>
+      <div class="course-name">Thermal Physics and Physics of Materials</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UCY 101</div>
+    <div>
+      <div class="course-name">Introductory Chemistry I</div>
+      <div class="course-sem">Autumn 2023</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UCY 102</div>
+    <div>
+      <div class="course-name">Introductory Chemistry II</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UCY 201</div>
+    <div>
+      <div class="course-name">Introductory Chemistry III</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UBL 101</div>
+    <div>
+      <div class="course-name">Introductory Biology I</div>
+      <div class="course-sem">Autumn 2023</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UENG 102</div>
+    <div>
+      <div class="course-name">Introduction to Electrical & Electronics Engineering</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UENG 103</div>
+    <div>
+      <div class="course-name">Introduction to Earth and its Environment</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UENG 201</div>
+    <div>
+      <div class="course-name">Introduction to Materials Science</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Resources -->
+<div class="course-section">
+  <h2>📚 Resources</h2>
+  <p style="opacity:0.6; font-size:0.9rem; margin-bottom:1rem;">Notes, problem sets, and code from my courses. More coming soon.</p>
+
+  <div class="resource-entry">
+    <div>
+      <div class="course-name">Hartree–Fock Implementation (H₂, HeH⁺)</div>
+      <div class="course-desc">Python implementation of restricted HF across STO-nG basis sets · MR308</div>
+    </div>
+    <a href="https://github.com/Kabyakun/Hartree_Fock" target="_blank" style="white-space:nowrap; margin-left:1rem;">GitHub →</a>
+  </div>
+
+  <div class="resource-entry">
+    <div>
+      <div class="course-name">Notes & Problem Sets</div>
+      <div class="course-desc">PH359, QT204, PH208, MR308 — coming soon</div>
+    </div>
+    <span class="resource-link">coming soon</span>
+  </div>
+
+</div>
+<!-- Humanities & Other -->
+<div class="course-section">
+  <h2>📖 Humanities & Other</h2>
+
+  <div class="course-entry">
+    <div class="course-code">UH 101</div>
+    <div>
+      <div class="course-name">Ways of Knowing</div>
+      <div class="course-sem">Autumn 2023</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UH 102</div>
+    <div>
+      <div class="course-name">Ways of Seeing</div>
+      <div class="course-sem">Spring 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UH 201</div>
+    <div>
+      <div class="course-name">Ways of Doing: Mapping Science–Society Relationship</div>
+      <div class="course-sem">Autumn 2024</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">UH 203</div>
+    <div>
+      <div class="course-name">Mapping India through the Folk Arts</div>
+      <div class="course-sem">Spring 2025</div>
+    </div>
+  </div>
+
+  <div class="course-entry">
+    <div class="course-code">CO 201</div>
+    <div>
+      <div class="course-name">The Art of Communications for Leaders</div>
+      <div class="course-sem">Autumn 2025</div>
+    </div>
+  </div>
+
+</div>
+{{ end }}
