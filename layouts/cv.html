@@ -1,69 +1,137 @@
 {{ define "main" }}
-<div style="margin-top: 1rem;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <h1>CV</h1>
-    <a href="/cv.pdf" target="_blank" style="font-size: 1.5rem;" title="Download PDF">📄</a>
-  </div>
-  <hr>
+<style>
+  .cv-section {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .cv-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .cv-table td {
+    padding: 0.3rem 1rem 0.3rem 0;
+    vertical-align: top;
+  }
+  .cv-table td:first-child {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .cv-entry {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .cv-entry:last-child { border-bottom: none; }
+  .cv-tag {
+    background: #0ea5e9;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    min-width: 90px;
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+  .cv-interest {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-weight: bold;
+  }
+  .cv-interest:last-child { border-bottom: none; }
+</style>
 
-  <div style="margin-top: 1.5rem;">
-    <h2>General Information</h2>
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr><td style="padding: 0.4rem 1rem 0.4rem 0; font-weight: bold;">Full Name</td><td>Kabyadeep Das</td></tr>
-      <tr><td style="padding: 0.4rem 1rem 0.4rem 0; font-weight: bold;">Current Position</td><td>3rd year undergraduate, Materials Research Centre, IISc Bangalore</td></tr>
-      <tr><td style="padding: 0.4rem 1rem 0.4rem 0; font-weight: bold;">E-mail</td><td><a href="mailto:kabyadeepdas@iisc.ac.in">kabyadeepdas@iisc.ac.in</a></td></tr>
-    </table>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Research Interests</h2>
-    <hr>
-    <ul>
-      <li>Experimental condensed matter physics</li>
-      <li>2D materials and van der Waals heterostructures</li>
-      <li>Nanoscale quantum transport and low-dimensional systems</li>
-    </ul>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Education</h2>
-    <hr>
-    <p><strong>Indian Institute of Science, Bengaluru</strong> &nbsp;·&nbsp; Expected 2027<br>
-    B.Sc. (Research), Major in Physics, Minor in Quantum Technology<br>
-    GPA: 7.9/10.0</p>
-
-    <p><strong>Kendriya Vidyalaya ONGC Agartala</strong> &nbsp;·&nbsp; 2011–2023<br>
-    AISSCE (Class 12): 95% &nbsp;·&nbsp; AISSE (Class 10): 95.2%</p>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Experience</h2>
-    <hr>
-    <p><strong>Undergraduate Research Intern</strong> &nbsp;·&nbsp; OUSUMS Lab, IISc &nbsp;·&nbsp; May–Jul 2025<br>
-    COMSOL simulations for Physical Vapor Deposition of CrCl₃; synthesis and characterization of 2D materials.</p>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Achievements</h2>
-    <hr>
-    <ul>
-      <li>All India Rank 341, IAT 2023 (IISER Aptitude Test)</li>
-      <li>Qualified JEE (Main & Advanced), NEET, CUET, NDA</li>
-      <li>Recipient of UG Institute Scholarship, IISc</li>
-    </ul>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Technical Skills</h2>
-    <hr>
-    <p>Python, NumPy, SciPy, PyTorch, Matplotlib, COMSOL Multiphysics, C, Quantum ESPRESSO</p>
-  </div>
-
-  <div style="margin-top: 2rem;">
-    <h2>Languages</h2>
-    <hr>
-    <p>English, Hindi, Bengali</p>
-  </div>
-
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+  <h1 style="margin:0;">CV</h1>
+  <a href="/cv.pdf" target="_blank" title="Download PDF" style="font-size:2.2rem; line-height:1;">
+    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" style="width:40px; height:40px;">
+  </a>
 </div>
+<hr style="margin-bottom:2rem;">
+
+<!-- General Information -->
+<div class="cv-section">
+  <h2>General Information</h2>
+  <table class="cv-table">
+    <tr><td>Full Name</td><td>Kabyadeep Das</td></tr>
+    <tr><td>Current Position</td><td>3rd year undergraduate, Materials Research Centre, IISc Bangalore</td></tr>
+    <tr><td>E-mail ID</td><td><a href="mailto:kabyadeepdas@iisc.ac.in">kabyadeepdas@iisc.ac.in</a></td></tr>
+  </table>
+</div>
+
+<!-- Research Interests -->
+<div class="cv-section">
+  <h2>Research Interests</h2>
+  <div class="cv-interest">Experimental condensed matter physics</div>
+  <div class="cv-interest">2D materials and van der Waals heterostructures</div>
+  <div class="cv-interest">Nanoscale quantum transport and low-dimensional systems</div>
+</div>
+
+<!-- Education -->
+<div class="cv-section">
+  <h2>Education</h2>
+  <div class="cv-entry">
+    <div class="cv-tag">2024 – PRESENT</div>
+    <div>
+      <strong>B.Sc. (Research) — Physics</strong><br>
+      Indian Institute of Science (IISc), Bangalore<br>
+      <small>Major in Physics, Minor in Quantum Technology · GPA: 7.9/10.0</small>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-tag">2011 – 2023</div>
+    <div>
+      <strong>Class 10 & 12</strong><br>
+      Kendriya Vidyalaya ONGC Agartala<br>
+      <small>AISSCE (Class 12): 95% · AISSE (Class 10): 95.2%</small>
+    </div>
+  </div>
+</div>
+
+<!-- Experience -->
+<div class="cv-section">
+  <h2>Research Experience</h2>
+  <div class="cv-entry">
+    <div class="cv-tag">May – Jul 2025</div>
+    <div>
+      <strong>Undergraduate Research Intern</strong><br>
+      OUSUMS Lab, IISc Bengaluru<br>
+      <small>COMSOL simulations for Physical Vapor Deposition of CrCl₃; synthesis and characterization of 2D material systems.</small>
+    </div>
+  </div>
+</div>
+
+<!-- Achievements -->
+<div class="cv-section">
+  <h2>Achievements</h2>
+  <div class="cv-interest">All India Rank 341 — IAT 2023 (IISER Aptitude Test)</div>
+  <div class="cv-interest">Qualified JEE (Main & Advanced), NEET, CUET, NDA</div>
+  <div class="cv-interest">Recipient of UG Institute Scholarship, IISc</div>
+</div>
+
+<!-- Technical Skills -->
+<div class="cv-section">
+  <h2>Technical Skills</h2>
+  <table class="cv-table">
+    <tr><td>Programming</td><td>Python, C, Bash</td></tr>
+    <tr><td>Libraries</td><td>NumPy, SciPy, PyTorch, Matplotlib</td></tr>
+    <tr><td>Software</td><td>COMSOL Multiphysics, Quantum ESPRESSO</td></tr>
+    <tr><td>Other</td><td>Machine Learning, Computational Modelling, Data Analysis</td></tr>
+  </table>
+</div>
+
+<!-- Languages -->
+<div class="cv-section">
+  <h2>Languages</h2>
+  <div class="cv-interest">English</div>
+  <div class="cv-interest">Hindi</div>
+  <div class="cv-interest">Bengali</div>
+</div>
+
 {{ end }}
