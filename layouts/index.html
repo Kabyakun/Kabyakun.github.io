@@ -54,12 +54,21 @@
   <h2 style="margin-bottom: 0.5rem;">News</h2>
   <hr style="margin-bottom: 1.2rem;">
 
-  <table style="width: 100%; border-collapse: collapse;">
-    <tr style="border-bottom: 1px solid rgba(255,255,255,0.07); padding: 0.6rem 0;">
-      <td style="padding: 0.6rem 1.5rem 0.6rem 0; white-space: nowrap; font-weight: bold; vertical-align: top; opacity: 0.7;">May 2026</td>
-      <td style="padding: 0.6rem 0;">Starting a summer research project with the group of <a href="https://physics.iisc.ac.in/~arindam/" target="_blank">Prof. Arindam Ghosh</a> at IISc on nanoscale device physics.</td>
-    </tr>
-  </table>
+  {{ $news := where .Site.RegularPages "Section" "news" }}
+  {{ if $news }}
+    <table style="width: 100%; border-collapse: collapse;">
+      {{ range first 3 $news }}
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.07);">
+        <td style="padding: 0.6rem 1.5rem 0.6rem 0; white-space: nowrap; font-weight: bold; opacity: 0.7; vertical-align: top;">
+          {{ .Date.Format "Jan 2006" }}
+        </td>
+        <td style="padding: 0.6rem 0;">{{ .Content | markdownify }}</td>
+      </tr>
+      {{ end }}
+    </table>
+  {{ else }}
+    <p style="opacity: 0.5; font-style: italic;">No news yet.</p>
+  {{ end }}
 </div>
 
 <!-- Recent Posts -->
